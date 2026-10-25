@@ -1,0 +1,60 @@
+RITMO · MIS HÁBITOS — VERSIÓN 1.0
+Aplicación personal para Android. Gratis, sin anuncios, sin cuentas.
+
+CONTENIDO DEL PAQUETE
+- index.html: pantalla de la aplicación.
+- style.css: diseño.
+- app.js: lógica de hábitos, rachas y respaldo.
+- manifest.webmanifest: datos para instalar como aplicación.
+- sw.js: uso sin conexión después de cargar la aplicación.
+- icon-192.png e icon-512.png: íconos.
+
+CÓMO INSTALARLA GRATIS EN ANDROID (SIN PUBLICARLA EN GOOGLE PLAY)
+1. Descargá RITMO_Android_PWA.zip y extraé su contenido usando la aplicación Archivos del teléfono.
+2. Entrá desde Chrome a https://github.com y registrate gratis si todavía no tenés cuenta.
+3. Creá un repositorio nuevo (New repository) llamado, por ejemplo, ritmo-habitos.
+   Elegí PUBLIC (GitHub Pages gratuito funciona con repositorios públicos).
+4. En el repositorio seleccioná Add file > Upload files (Agregar archivo > Cargar archivos).
+   Seleccioná los 7 archivos de la carpeta extraída (no subas el ZIP solamente).
+   Si la interfaz móvil no muestra estas opciones, en el menú de Chrome activá "Sitio para computadoras".
+   Confirmá los cambios con Commit changes.
+5. Entrá a Settings > Pages > Build and deployment.
+   Source: Deploy from a branch. Branch: main. Folder: /(root). Tocá Save.
+6. Una vez que GitHub Pages indique que el sitio está publicado, abrí la dirección
+   que muestra su sección Pages (tendrá esta forma):
+   https://TU-USUARIO.github.io/ritmo-habitos/
+7. Abrí esa dirección en Chrome de Android y tocá el menú de tres puntos.
+   Elegí "Instalar aplicación" o "Agregar a la pantalla principal" y confirmá.
+8. Abrí Ritmo desde su nuevo ícono y cargá tus hábitos y cronómetros.
+
+FUNCIONES
+- Hábitos diarios: crear, editar, eliminar, marcar hoy o fechas anteriores;
+  racha actual, mejor racha, calendario y porcentaje de cumplimiento de 7 días.
+- Cronómetros: iniciar desde ahora o desde una fecha pasada, contador permanente
+  en días/horas/minutos/segundos, reiniciar y conservar el récord.
+- Datos: descargar respaldo JSON, importar respaldo y borrar todos los datos.
+- Uso offline: después de la primera carga por HTTPS se guardan los recursos
+  de la app para poder abrirla sin internet. El contador calcula el tiempo
+  usando la fecha y hora actual del teléfono (no necesita estar abierta).
+
+PRIVACIDAD Y ADVERTENCIAS
+- Los archivos publicados en el repositorio público y la dirección web pueden
+  ser vistos por otras personas; no agregues ahí tus datos personales.
+- Tus hábitos y marcas no están incluidos en los archivos publicados. Se guardan
+  solamente en el almacenamiento local del navegador del dispositivo.
+- GitHub puede registrar datos de acceso a su servicio, como direcciones IP.
+- No existe inicio de sesión ni sincronización. Si borrás los datos del navegador,
+  cambiás de teléfono o instalás la PWA en otro navegador, no se comparten datos.
+- Usá Ajustes > Descargar copia para respaldar tu historial periódicamente.
+  Podés guardar el JSON en el teléfono o una carpeta personal a tu elección.
+- El cálculo de rachas diarias usa la fecha local. Si todavía no marcaste hoy,
+  la racha vigente toma en cuenta los días consecutivos hasta ayer.
+- Los cronómetros muestran horas transcurridas y días de 24 horas, no una
+  cuenta de cambios de fecha del calendario.
+- Esta primera versión NO envía notificaciones, NO sincroniza dispositivos
+  y NO es un archivo APK. Es una app web instalable (PWA).
+
+SOPORTE PARA ACTUALIZACIONES
+Si después querés cambiar diseño o funciones, reemplazá los archivos del
+repositorio. Al publicar cambios de código, actualizá la versión del caché en
+sw.js (CACHE_NAME) para que el navegador cargue los nuevos archivos.
